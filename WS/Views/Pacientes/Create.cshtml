@@ -1,0 +1,44 @@
+﻿@model WS.Models.Paciente
+
+@{
+    ViewData["Title"] = "Cadastro de Paciente";
+}
+
+<h1>Cadastrar</h1>
+
+<h4>Paciente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label">Nome do Paciente:</label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExameId" class="control-label">Escolha um Exame: </label>
+                <select asp-for="ExameId" class ="form-control" asp-items="ViewBag.ExameId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Data" class="control-label">Escolha uma Data para Realizar:</label>
+                <input asp-for="Data" class="form-control" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="DataPronto" class="control-label"></label>
+                <input  asp-for="DataPronto" class="form-control" readonly/>
+                <span asp-validation-for="DataPronto" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Ver Pacientes</a>
+</div>
+

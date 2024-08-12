@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Página Principal";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem-Vindo!</h1>
+    <a class="btn btn-primary" asp-controller="Exame" asp-action="Create">Cadastrar Exame</a>
+    <a class="btn btn-warning" asp-controller="Pacientes" asp-action="Create">Cadastrar Paciente</a>
+</div>
+<br />
+<div class="text-center">
+    <a class="btn btn-outline-primary" asp-controller="Exame" asp-action="Index">Listar Exames</a>
+    <a class="btn btn-outline-warning" asp-controller="Pacientes" asp-action="Index">Listar Pacientes</a>
+</div>

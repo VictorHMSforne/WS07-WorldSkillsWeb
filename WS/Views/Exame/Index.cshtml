@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WS.Models.Exame>
+
+@{
+    ViewData["Title"] = "Lista";
+}
+
+<h1>Listagem dos Exames</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar Exame</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeExame)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dias)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeExame)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dias)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
